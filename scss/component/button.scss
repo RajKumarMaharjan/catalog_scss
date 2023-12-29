@@ -1,0 +1,32 @@
+%btn {
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+%link-btn {
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #1D6FA3;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+%view-btn {
+    border: 1px solid #1D6FA3;
+    border-radius: 4px;
+    padding: 10px 20px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #24272E;
+    font-family: 'DM Sans', sans-serif;
+
+}

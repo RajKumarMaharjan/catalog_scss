@@ -1,0 +1,70 @@
+  .card {
+      width: 352px;
+      height: 337px;
+      border-radius: 22px;
+      background-color: #ffff;
+      padding: 36px 29px 17px 29px;
+
+      &-icon,
+      &-icon-check,
+      &-icon-text {
+        i {
+          font-size: 32px;
+          padding: 17px;
+          rotate: 270deg;
+          color: #a276ff;
+          background-color: lighten(#a276ff, 25);
+          border-radius: 18px;
+          margin-right: 18px;
+        }
+        font-size: 18px;
+        font-weight: 400;
+      }
+
+      &-icon-text {
+        i {
+          color: #7291ff;
+          background-color: lighten(#7291ff, 25);
+          rotate: 0deg;
+        }
+      }
+
+      &-icon-check {
+        i {
+          color: #ff5400;
+          background-color: lighten(#ff5400, 45);
+          rotate: 0deg;
+        }
+      }
+
+      &-content,
+      &-content-check,
+      &-content-text {
+        h4 {
+          font-size: 24px;
+          font-weight: 600;
+          margin-top: 21px;
+        }
+        p {
+          font-size: 16px;
+          font-weight: 400;
+          color: #7c7d82;
+          margin-top: 12.5px;
+          width: 294px;
+          padding-right: 25px;
+        }
+        button {
+          @extend %link-btn;
+          margin-top: 50px;
+          float: left;
+          margin-left: -15px;
+        }
+      }
+
+      &-content-text,
+      &-content-check {
+        p {
+          margin-top: 60px;
+        }
+      }
+    }
