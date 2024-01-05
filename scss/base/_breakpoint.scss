@@ -6,7 +6,7 @@
   }
 };
 @mixin sm {
-  @media screen and (max-width:780px) {
+  @media screen and (max-width:826px) {
     @content
   }
 };
@@ -16,7 +16,23 @@
   }
 };
 @mixin lg {
-  @media screen and (max-width:1200px) {
+  @media screen and (max-width:1044px) {
     @content
+  }
+};
+@mixin xl {
+  @media screen and (max-width:1220px) {
+    @content
+  }
+};
+@mixin xxl {
+  @media screen and (max-width:1440px) {
+    @content
+  }
+};
+
+p {
+  @include xl {
+    font-size: 16px;
   }
 }

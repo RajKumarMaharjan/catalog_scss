@@ -5,9 +5,14 @@
   margin: 0;
   padding: 0;
 }
+html {
+  scroll-behavior: smooth;
+ 
+}
 
 body {
   font-family: "Inter", sans-serif;
+  max-width: 1440px;
   
 }
 
@@ -19,3 +24,7 @@ a {
   text-decoration: none;
 }
 
+p {
+  font-size: 18px;
+  font-weight: 400;
+}
