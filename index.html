@@ -47,9 +47,9 @@
                                         <li>
                                             <a href="#news">Case Studies</a>
                                         </li>
-                                        <li>
-                                            <a href="#resources">Resources</a>
-                                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                        <li id="dropdown">
+                                            <a>Resources</a>
+                                            <i  class="fa fa-angle-down" aria-hidden="true"></i>
                                         </li>
                                     </ul>
                                 </div>
@@ -60,30 +60,45 @@
                                         <i class="fa fa-search" aria-hidden="true"></i>
                                     </button>
                                     <div class="menu-btn">
-                                        <button>
+                                        <button id="handbug">
                                             <i class="fa fa-bars" aria-hidden="true"></i>
                                         </button>
+                                        <div class="small-menu">
+                                            <ul class="small-menu-item">
+                                                <li>
+                                                    <a href="index.html">Home</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#profile">About Us</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#news">Case Studies</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Resources</a>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-
                             </div>
                         </nav>
-                        <div class="dropdown">
-                            <div class="dropdown-menu">
+                        <div class="dropdown-menu">
+                            <div class="dropdown-menu-item">
                                 <i class="fa fa-book" aria-hidden="true"></i>
-                                <a href="#">
+                                <a href="#profile">
                                     <h3>Blog</h3>
                                     <p>The latest industry news, updates and info.</p>
                                 </a>
                             </div>
-                            <div class="dropdown-menu">
+                            <div class="dropdown-menu-item">
                                 <i class="fa fa-bolt" aria-hidden="true"></i>
-                                <a href="#">
+                                <a href="#news">
                                     <h3>Customer stories</h3>
                                     <p>Learn how our customers are making big changes.</p>
                                 </a>
                             </div>
-                            <div class="dropdown-menu">
+                            <div class="dropdown-menu-item">
                                 <i class="fa fa-play-circle-o" aria-hidden="true"></i>
                                 <a href="#">
                                     <h3>Video tutorials</h3>
@@ -248,7 +263,7 @@
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
                 </button>
             </div>
-           
+
         </div>
     </section>
     <section id="news">
@@ -566,7 +581,7 @@
                 </div>
             </div>
         </div>
-        <a href="#header">
+        <a href="#header" class="scroll-btn">
             <button>
                 <i class="fa fa-arrow-up" aria-hidden="true"></i>
             </button>
@@ -584,6 +599,10 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script src="./js/carousel.js"></script>
+    <script src="./js/dropDown.js"></script>
+    <script src="./js/search.js"></script>
+    <script src="./js/handbug.js"></script>
+    
 </body>
 
 </html>
