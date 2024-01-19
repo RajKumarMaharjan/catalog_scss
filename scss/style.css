@@ -74,9 +74,13 @@ p {
   background-color: #F9F9FF;
 }
 .banner-image {
-  width: 100%;
+  width: auto;
   overflow: hidden;
   height: 95vh;
+  animation: banner-image linear;
+  animation-timeline: view();
+  animation-range: exit;
+  transform-origin: bottom;
 }
 .banner-image img {
   width: 100%;
@@ -249,11 +253,14 @@ p {
   z-index: 10;
   cursor: pointer;
 }
-.banner-content .content .navbar nav .nav-right .nav-search .menu-btn .small-menu a {
+.banner-content .content .navbar nav .nav-right .nav-search .menu-btn .small-menu-item li a {
   color: #24272E;
   font-size: 16px;
   font-weight: 400;
   line-height: 34px;
+}
+.banner-content .content .navbar nav .nav-right .nav-search .menu-btn .small-menu-item li a:hover {
+  color: #4d92d3;
 }
 .banner-content .content .navbar nav .nav-right .nav-search .menu-btn .small-menu.show {
   display: block;
@@ -309,7 +316,7 @@ p {
   transform: translate(70%, 250%);
   z-index: 10;
 }
-@media screen and (max-width: 1220px) {
+@media screen and (max-width: 1440px) {
   .banner-content .content .navbar .search-box {
     transform: translate(50%, 280%);
   }
@@ -319,7 +326,7 @@ p {
     transform: translate(30%, 280%);
   }
 }
-@media screen and (max-width: 1044px) {
+@media screen and (max-width: 960px) {
   .banner-content .content .navbar .search-box {
     transform: translate(20%, 280%);
   }
