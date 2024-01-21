@@ -7,8 +7,11 @@ $('.owl-carousel').owlCarousel({
         0:{
             items:1
         },
+        680:{
+            items:1
+        },
         768:{
-            items:2
+            items:3
         },
          1024:{
             items:4
@@ -35,6 +38,7 @@ const searchBar = document.querySelector('.search-box');
 function toggleSearch(){
     searchBar.classList.toggle('show')
     dropdownMenu.classList.remove('show')
+    hamburgerMenu.classList.remove('show')
 };
 
 document.addEventListener('click', (event) => {
@@ -76,7 +80,7 @@ const menuItem = document.querySelector('.small-menu-item')
 
 function toggleHamburgerMenu(){
     hamburgerMenu.classList.toggle('show')
-  
+    searchBar.classList.remove('show')
 };
 
 document.addEventListener('click', (event) => {

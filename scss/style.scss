@@ -65,7 +65,7 @@
           align-items: center;
           height: 80px;
           border-bottom: 1px solid #fff;
-          padding-inline: 112px;
+          padding-inline: 100px;
           @include xl {
             padding: 0 70px;
           }
@@ -306,6 +306,9 @@
         h1 {
           color: #ffff;
           font-size: 60px;
+          font-weight: 600;
+          line-height: 72px;
+        
           @include xl {
             font-size: 50px;
           }
@@ -325,6 +328,8 @@
         }
         P {
           font-size: 20px;
+          font-weight: 400;
+          line-height: 30px;
           width: 768px;
           text-align: center;
           color: #e3e3e3;
@@ -384,7 +389,7 @@
 .campaigns {
   background-color: $light-color;
 
-  &-contant {
+  &-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -446,17 +451,19 @@
       gap: 27px;
       padding-inline: 160px;
       @include xl {
-        padding-inline: 140px;
+        padding-inline: 70px;
       }
-      // @include lg {
-      //   padding-inline: 100px;
-      // }
+    
       @include lg {
         grid-template-columns: 1fr 1fr;
+        padding-inline: 60px;
       }
       @include md {
+        padding-inline: 50px;
+      }
+      @include sm {
         grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
-        padding-inline: 80px;
+        padding-inline: 50px;
       }
       // @include xs {
       //   grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
@@ -521,16 +528,19 @@
 
 .profile {
   background-color: #fff;
-  margin: 0 150px;
+  margin: 0 155px;
   margin-top: 10%;
+  @include xl {
+    margin-inline: 70px;
+  }
   @include lg {
-    margin-inline: 100px;
+    margin-inline: 60px;
+  }
+  @include md {
+    margin-inline: 50px;
   }
   @include sm {
-    margin-inline: 90px;
-  }
-  @include xs {
-    margin-inline: 80px;
+    margin-inline: 50px;
   }
 
   &-banner {
@@ -605,6 +615,9 @@
             animation-timeline: view();
             animation-range-start: 10px;
             animation-range-end: 400px;
+            @include sm {
+              height: auto;
+            }
           }
           @keyframes fade-in {
             from {
@@ -639,8 +652,14 @@
   padding: 80px 141.5px;
   margin-top: 96px;
   position: relative;
+  @include xl {
+    padding-inline: 70px;
+  }
+  @include lg {
+    padding-inline: 60px;
+  }
   @include md {
-    padding-inline: 100px;
+    padding-inline: 50px;
   }
   @include xs {
     padding-inline: 80px;
@@ -678,7 +697,6 @@
 
 .news {
   margin-top: 80px;
-
   &-content {
     display: flex;
     flex-direction: column;
@@ -712,6 +730,12 @@
     align-content: center;
     gap: 25px;
     justify-content: center;
+    @include xl{
+      padding-inline: 70px;
+    }
+    @include md{
+      padding-inline: 50px;
+    }
 
     .news-cards-items {
       background-color: #f9f9ff;
@@ -721,12 +745,11 @@
       padding: 20px 22px 23px 22px;
 
       @include md {
-        margin-top: 20px;
-        width: 357px;
+        margin-top: 40px;
+        width: 100%;
+        height: auto;
       }
-      @include sm {
-        width: 400px;
-      }
+   
 
       img {
         width: 100%;
@@ -755,10 +778,9 @@
           @extend %link-btn;
           padding-top: 9px;
           cursor: pointer;
-        }
-        &:hover {
-          button {
-            opacity: 0.7;
+          transition-duration: 0.3s;
+          &:hover {
+            opacity: 0.8;
           }
         }
       }
@@ -770,10 +792,13 @@
     margin-inline: auto;
     margin-top: 32px;
     cursor: pointer;
+    transition-duration: 0.3s;
+    @include md {
+      margin-top: 190px;
+    }
     &:hover {
       background-color: #1d6fa3;
       color: #fff;
-      transition-duration: 0.3s;
     }
   }
 }
@@ -818,13 +843,14 @@
     gap: 27px;
     padding-inline: 160px;
     @include xl {
-      padding-inline: 140px;
+      padding-inline: 70px;
     }
     @include lg {
-      padding-inline: 100px;
+      padding-inline: 60px;
     }
     @include md {
       grid-template-columns: 1fr 1fr;
+      padding-inline: 50px;
     }
     @include xs {
       grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
@@ -957,8 +983,10 @@
       display: flex;
       flex-direction: column;
       gap: 16px;
+      padding-inline: 0;
       @include sm {
-        width: 400px;
+        // width: 400px;
+        padding-inline: 20px;
       }
 
       input {
@@ -1018,7 +1046,7 @@
     width: 100%;
     height: 51.5vh;
     object-fit: cover;
-    @include xl {
+    @include md {
       height: 70vh;
     }
   }
@@ -1030,7 +1058,7 @@
     filter: contrast(95%);
     position: absolute;
     top: 0;
-    @include xl {
+    @include md{
       height: 70vh;
     }
   }
@@ -1042,13 +1070,22 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 165px;
+    padding: 0 160px;
     gap: 30px;
-    @include sm {
-      padding: 0 65px;
+
+    @include xl {
+      padding-inline: 70px;
+    }
+
+    @include lg {
+      padding-inline: 60px;
+    }
+    @include md {
+      padding-inline: 50px;
     }
 
     .left-content {
+       flex-basis: 300px;
       .bottom-logo {
         display: flex;
         align-items: center;
@@ -1056,8 +1093,8 @@
         @include lg {
           width: 300px;
         }
-        .logomark {
-          width: 23%;
+        .logo-mark {
+          width: 22%;
           height: auto;
         }
         .logo {
@@ -1070,19 +1107,12 @@
         font-weight: 400;
         color: #ffffff;
         margin: 24px 0px;
-        width: 400px;
         line-height: 21px;
-        // @include xl {
-        //   width: 300px;
-        // }
       }
       .social-media {
         ul {
           display: flex;
           gap: 16px;
-          @include xl {
-            justify-content: center;
-          }
 
           li {
             a {
@@ -1101,34 +1131,36 @@
     .right-content {
       display: flex;
       gap: 80px;
-      @include sm {
-        gap: 60px;
-      }
-
       .link {
-        h4 {
+    
+        h3 {
           font-size: 16px;
           font-weight: 600;
           color: #ffffff;
+          line-height: 20px;
+          margin-bottom: 32px;
         }
         &-items {
           ul {
-            li {
-              margin: 16px 0px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
 
+            li {
               a {
                 font-size: 14px;
                 font-weight: 400;
                 color: #ffffff;
+                font-family: DM Sans;
+                line-height: 20px;
               }
             }
           }
         }
       }
-    }
   }
 }
-
+}
 footer {
   .footer-content {
     width: 100%;
@@ -1139,7 +1171,17 @@ footer {
     .terms {
       display: flex;
       justify-content: space-between;
-      margin-inline: 10%;
+      padding-inline: 164px;
+
+      @include xl {
+        padding-inline: 70px;
+      }
+      @include lg {
+        padding-inline: 60px;
+      }
+      @include md {
+        padding-inline: 50px;
+      }
 
       .left {
         a {
