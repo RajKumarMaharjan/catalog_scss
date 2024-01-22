@@ -81,6 +81,9 @@
           @include xs {
             padding: 0 30px;
           }
+          @include xxs {
+            padding-inline: 20px;
+          }
           .nav-left {
             display: flex;
             align-items: center;
@@ -88,6 +91,9 @@
             .nav-logo {
               img {
                 width: 100%;
+                @include xxs {
+                  width: 60%;
+                }
               }
             }
 
@@ -207,15 +213,25 @@
                   right: 150px;
                 }
 
-
                 @include md {
-                  right: 100px;
+                  right: 130px;
+                  width: 500px;
+                  padding: 10px;
                 }
 
                 @include sm {
-                  width: 552px;
-                  padding: 10px;
                   right: 10px;
+                }
+                @include xs {
+                  width: 380px;
+                  padding: 6px;
+                  right: 60px;
+                }
+                @include xxs {
+                  width: 265px;
+                  padding: 5px;
+                  right: 50px;
+                  top: 70px;
                 }
                 input {
                   width: 552px;
@@ -223,8 +239,14 @@
                   color: #62696f;
                   font-size: 16px;
                   font-weight: 400;
-                  @include sm {
+                  @include md {
                     width: 452px;
+                  }
+                  @include xs {
+                    width: 340px;
+                  }
+                  @include xxs {
+                    width: 180px;
                   }
                 }
                 .close-btn {
@@ -238,6 +260,9 @@
                     font-size: 14px;
                     background-color: $light-color;
                     font-weight: normal;
+                  }
+                  @include xxs {
+                    display: none;
                   }
                 }
               }
@@ -302,13 +327,16 @@
         justify-content: center;
         align-items: center;
         margin-top: 152px;
+        @include xxs {
+          margin-top: 70px;
+        }
 
         h1 {
           color: #ffff;
           font-size: 60px;
           font-weight: 600;
           line-height: 72px;
-        
+
           @include xl {
             font-size: 50px;
           }
@@ -323,7 +351,12 @@
           @include xs {
             font-size: 30px;
             padding: 0 38px;
-            text-align: center;
+          }
+
+          @include xs {
+            font-size: 28px;
+            line-height: 30px;
+            font-weight: 400;
           }
         }
         P {
@@ -346,6 +379,12 @@
           @include sm {
             font-size: 14px;
             padding-inline: 50px;
+          }
+          @include xs {
+            font-size: 12px;
+            line-height: 18px;
+            font-weight: 300;
+            padding-inline: 90px;
           }
         }
         button {
@@ -400,6 +439,11 @@
       font-weight: 600;
       color: #24272e;
       margin-bottom: 40px;
+
+      @include xxs {
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
     }
 
     p {
@@ -407,12 +451,24 @@
       color: #667085;
       text-align: center;
       line-height: 30px;
-      width: 768px;
-      @include md {
-        width: 690px;
+      padding-inline: 350px;
+
+      @include xl {
+        padding-inline: 270px;
       }
-      @include sm {
-        width: 480px;
+      @include lg {
+        padding-inline: 170px;
+      }
+      @include md {
+        padding-inline: 120px;
+      }
+      @include xs {
+        padding-inline: 50px;
+        font-size: 18px;
+      }
+      @include xxs {
+        text-align: start;
+        padding-inline: 20px;
       }
     }
   }
@@ -453,7 +509,7 @@
       @include xl {
         padding-inline: 70px;
       }
-    
+
       @include lg {
         grid-template-columns: 1fr 1fr;
         padding-inline: 60px;
@@ -465,10 +521,9 @@
         grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
         padding-inline: 50px;
       }
-      // @include xs {
-      //   grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
-      //   padding-inline: 80px;
-      // }
+      @include xxs {
+        padding-inline: 20px;
+      }
 
       .card-items {
         // width: 352px;
@@ -541,6 +596,9 @@
   }
   @include sm {
     margin-inline: 50px;
+  }
+  @include xxs {
+    margin-inline: 20px;
   }
 
   &-banner {
@@ -662,7 +720,10 @@
     padding-inline: 50px;
   }
   @include xs {
-    padding-inline: 80px;
+    padding-inline: 50px;
+  }
+  @include xxs {
+    padding-inline: 20px;
   }
   .owl-carousel {
     padding-inline: 65px;
@@ -670,6 +731,9 @@
       img {
         width: 100%;
         padding-inline: 35px;
+        @include xxs {
+          padding-inline: 5px;
+        }
       }
     }
   }
@@ -720,6 +784,10 @@
       @include xs {
         width: 300px;
       }
+      @include xxs {
+        width: 100%;
+        padding-inline: 20px;
+      }
     }
   }
 
@@ -730,11 +798,12 @@
     align-content: center;
     gap: 25px;
     justify-content: center;
-    @include xl{
-      padding-inline: 70px;
-    }
-    @include md{
+
+    @include md {
       padding-inline: 50px;
+    }
+    @include xxs {
+      padding-inline: 20px;
     }
 
     .news-cards-items {
@@ -749,7 +818,6 @@
         width: 100%;
         height: auto;
       }
-   
 
       img {
         width: 100%;
@@ -818,6 +886,10 @@
       font-size: 32px;
       font-weight: 600;
       color: #24272e;
+      @include xxs {
+        font-size: 28px;
+        font-weight: 500;
+      }
     }
 
     P {
@@ -828,6 +900,11 @@
       line-height: 27px;
       @include sm {
         width: 480px;
+      }
+      @include xxs {
+        width: 100%;
+        padding-inline: 20px;
+        line-height: 22px;
       }
     }
   }
@@ -854,7 +931,10 @@
     }
     @include xs {
       grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
-      padding-inline: 80px;
+      padding-inline: 50px;
+    }
+    @include xxs {
+      padding-inline: 20px;
     }
     .card-items {
       // width: 352px;
@@ -945,6 +1025,9 @@
 
 .contact {
   padding: 80px 0px;
+  @include xxs {
+    padding-inline: 20px;
+  }
   &-content {
     display: flex;
     flex-direction: column;
@@ -988,6 +1071,10 @@
         // width: 400px;
         padding-inline: 20px;
       }
+      @include xxs {
+        width: 100%;
+        padding-inline: 0px;
+      }
 
       input {
         padding: 12px;
@@ -1003,12 +1090,18 @@
       .name {
         display: flex;
         gap: 16px;
+        @include xxs {
+          flex-direction: column;
+        }
 
         &-label {
           display: flex;
           flex-direction: column;
           gap: 8px;
           width: 50%;
+          @include xxs {
+            width: 100%;
+          }
         }
       }
 
@@ -1047,7 +1140,7 @@
     height: 51.5vh;
     object-fit: cover;
     @include md {
-      height: 70vh;
+      height: 80vh;
     }
   }
   &-box {
@@ -1058,8 +1151,8 @@
     filter: contrast(95%);
     position: absolute;
     top: 0;
-    @include md{
-      height: 70vh;
+    @include md {
+      height: 80vh;
     }
   }
 
@@ -1083,9 +1176,11 @@
     @include md {
       padding-inline: 50px;
     }
-
+    @include xxs {
+      padding-inline: 20px;
+    }
     .left-content {
-       flex-basis: 300px;
+      flex-basis: 300px;
       .bottom-logo {
         display: flex;
         align-items: center;
@@ -1096,10 +1191,16 @@
         .logo-mark {
           width: 22%;
           height: auto;
+          @include xxs {
+            width: 16%;
+          }
         }
         .logo {
           width: 44%;
           height: auto;
+          @include xxs {
+            width: 36%;
+          }
         }
       }
       P {
@@ -1131,21 +1232,35 @@
     .right-content {
       display: flex;
       gap: 80px;
+      @include xxs {
+        gap: 14px;
+        justify-content: space-around;
+      }
       .link {
-    
         h3 {
           font-size: 16px;
           font-weight: 600;
           color: #ffffff;
           line-height: 20px;
           margin-bottom: 32px;
+          @include sm {
+            margin-bottom: 18px;
+          }
+          @include xs {
+            margin-bottom: 12px;
+          }
         }
         &-items {
           ul {
             display: flex;
             flex-direction: column;
             gap: 16px;
-
+            @include sm {
+              gap: 8px;
+            }
+            @include xs {
+              gap: 3px;
+            }
             li {
               a {
                 font-size: 14px;
@@ -1158,8 +1273,8 @@
           }
         }
       }
+    }
   }
-}
 }
 footer {
   .footer-content {
@@ -1181,6 +1296,9 @@ footer {
       }
       @include md {
         padding-inline: 50px;
+      }
+      @include xxs {
+        padding-inline: 20px;
       }
 
       .left {
