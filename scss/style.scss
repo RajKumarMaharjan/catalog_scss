@@ -181,7 +181,7 @@
           }
           .nav-right {
             display: flex;
-            gap: 14px;
+            gap: 24px;
             .nav-search {
               position: relative;
               .Search-icon {
@@ -192,6 +192,10 @@
                 i {
                   color: #ffffff;
                   cursor: pointer;
+                  font-size: 22px;
+                  @include xxs {
+                    font-size: 16px;
+                  }
                 }
               }
               .search-box {
@@ -201,51 +205,48 @@
                 width: 616px;
                 padding: 16px;
                 position: absolute;
-                top: 110px;
-                left: auto;
-                right: 200px;
+                top: 500%;
+                right:0;
+                transform: translate(-50%);
+
                 i {
                   color: #62696f;
                   font-size: 16px;
                   font-weight: 400;
                 }
-                @include lg {
-                  right: 150px;
+                @include xl {
+                  transform: translate(-40%);
                 }
-
+                @include lg {
+                  transform: translate(-18%);
+                }
                 @include md {
-                  right: 130px;
+                  transform: translate(-10%);
+                }
+                @include sm {
                   width: 500px;
                   padding: 10px;
-                }
-
-                @include sm {
-                  right: 10px;
+                  transform: translate(-10%);
                 }
                 @include xs {
-                  width: 380px;
-                  padding: 6px;
-                  right: 60px;
+                  width: 280px;
+                  padding: 10px;
+                  transform: translate(-20%);
                 }
                 @include xxs {
-                  width: 265px;
-                  padding: 5px;
-                  right: 50px;
-                  top: 70px;
+                  transform: translate(-6%);
                 }
+
                 input {
                   width: 552px;
                   border: none;
                   color: #62696f;
                   font-size: 16px;
                   font-weight: 400;
-                  @include md {
+                  @include sm {
                     width: 452px;
                   }
                   @include xs {
-                    width: 340px;
-                  }
-                  @include xxs {
                     width: 180px;
                   }
                 }
@@ -261,9 +262,6 @@
                     background-color: $light-color;
                     font-weight: normal;
                   }
-                  @include xxs {
-                    display: none;
-                  }
                 }
               }
               .search-box.show {
@@ -276,7 +274,10 @@
               cursor: pointer;
               #hamburger {
                 i {
-                  font-size: 18px;
+                  font-size: 24px;
+                  @include xxs {
+                    font-size: 16px;
+                  }
                 }
               }
               @include sm {
@@ -291,7 +292,7 @@
               .small-menu {
                 display: none;
                 position: absolute;
-                top: 50px;
+                top: 40px;
                 right: 0;
                 width: 120px;
                 border: 1px solid #ffffff;
@@ -321,16 +322,14 @@
           }
         }
       }
+    
       &-text {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         margin-top: 152px;
-        @include xxs {
-          margin-top: 70px;
-        }
-
+       
         h1 {
           color: #ffff;
           font-size: 60px;
@@ -379,12 +378,17 @@
           @include sm {
             font-size: 14px;
             padding-inline: 50px;
+            width: 100%;
+            line-height: 24px;
           }
           @include xs {
             font-size: 12px;
             line-height: 18px;
             font-weight: 300;
             padding-inline: 90px;
+          }
+          @include xxs {
+            padding-inline: 20px
           }
         }
         button {
@@ -722,18 +726,12 @@
   @include xs {
     padding-inline: 50px;
   }
-  @include xxs {
-    padding-inline: 20px;
-  }
   .owl-carousel {
     padding-inline: 65px;
     .item {
       img {
         width: 100%;
         padding-inline: 35px;
-        @include xxs {
-          padding-inline: 5px;
-        }
       }
     }
   }
@@ -1232,10 +1230,19 @@
     .right-content {
       display: flex;
       gap: 80px;
+      @include md {
+        width: 100%;
+        justify-content: space-between;
+        gap: 0px;
+        padding-right: 180px;
+      }
+      @include sm {
+        padding-right: 0px;
+      }
       @include xxs {
         gap: 14px;
-        justify-content: space-around;
       }
+
       .link {
         h3 {
           font-size: 16px;
